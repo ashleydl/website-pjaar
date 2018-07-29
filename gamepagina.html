@@ -1,0 +1,85 @@
+
+
+
+<div class="jumbotron">
+
+	      	<script>
+
+			function playGame() {
+				//Get the userchoice from the select-html-element with id=userSelect
+				var userChoice = document.getElementById('userSelect').value;
+				//Let the computer make a choice
+				var computerChoice = Math.random();
+				if (computerChoice < 0.34) {
+					computerChoice = "rock";
+				} else if (computerChoice <= 0.67) {
+					computerChoice = "paper";
+				} else {
+					computerChoice = "scissors";
+				}
+				//Now, let's play!
+				var result = compare(userChoice, computerChoice);
+				//Manipulate the DOM to reflect the game's result'
+				document.getElementById('userChoice').innerHTML = userChoice;
+				document.getElementById('computerChoice').innerHTML = computerChoice;
+				document.getElementById('compareResult').innerHTML = result;
+			}
+
+			function compare(choice1, choice2) {
+				if (choice1 === choice2) {
+					return 'gelijkspel!';
+				}
+				if (choice1 === 'rock') {
+					if (choice2 === 'scissors') {
+						return 'steen wint';
+					} else {
+						return 'papier wint';
+					}
+				}
+				if (choice1 === 'paper') {
+					if (choice2 === 'rock') {
+						return 'papier wint';
+					} else {
+						return 'schaar wint';
+					}
+				}
+				if (choice1 === 'scissors') {
+					if (choice2 === 'paper') {
+						return 'schaar wint';
+					} else {
+						return 'steen wint';
+					}
+				}
+			}
+		</script>
+
+		<br>
+		<h1>Steen, Papier, Schaar!</h1>
+
+			<div>
+				<p>
+					<select id="userSelect">
+						<option value="rock">Steen</option>
+						<option value="paper">Papier</option>
+						<option value="scissors">Schaar</option>
+					</select>
+					<button onclick="playGame()">
+						Speel
+					</button>
+				</p>
+			</div>
+			<table>
+				<tbody><tr>
+					<td>Jij koos: </td>
+					<td id="userChoice">niets</td>
+				</tr>
+				<tr>
+					<td>De computer koos: </td>
+					<td id="computerChoice">niets</td>
+				</tr>
+				<tr>
+					<td>De uitkomst van het spel is: </td>
+					<td id="compareResult">Nog niet gespeeld. Maak een keuze, of klik op speel</td>
+				</tr>
+			</tbody></table>
+		  	</div>

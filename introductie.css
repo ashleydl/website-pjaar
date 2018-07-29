@@ -1,0 +1,86 @@
+Li > p {
+  float: right;
+  position:relative;
+  color:orange;
+
+}
+
+a:hover {
+	color: grey;
+	text-decoration: none;
+}
+
+a:link {
+  color:grey;
+  text-decoration: none;
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: url('img/jumbotron.jpg');
+  background-size: cover;
+  background-position: 20% 67%;
+}
+
+.btn btn-default {
+  hover:blue;
+
+}
+
+.btn.btn-default:hover {
+  color: white;
+  background-color: #009188;
+}
+
+.navbar-text {
+ color: black;
+
+}
+
+h3 {
+  color: #009188;
+
+}
+
+
+.punten {
+  display:inline;
+  position: static;
+  margin-bottom: 50px;
+}
+
+.navbar-text {
+  color:grey;
+  float:right;
+}
+
+html, body { height: 40%; }
+#container {
+	min-height: 100%;
+	height: auto !important;
+	height: 10%;
+	margin-bottom: -25px; /* hoogte footer */
+}
+
+#spacer {
+	display: block !important;
+	height: 25px; /* hoogte footer */
+}
+
+#footer {
+	clear: both;
+	height: 25px; /* hoogte footer */
+  float:right;
+  margin-right: 50px;
+  color:grey;
+
+}
+
+.page-header {
+  margin-top:0;
+}
+
+.panel-body {
+  padding-top: 0;
+  position: relative;
+}
